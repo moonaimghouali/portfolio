@@ -20,17 +20,17 @@ export default function Home() {
           <span className='text-7xl text-rose-600'> UI Design.</span>
         </div>
 
-        <div className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
-          <div className='text-5xl font-semibold'>2+</div>
-          <div className='text-lg font-semibold'>Years of Experience</div>
-        </div>
+        <Link href={'/memories'} className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
+          <div className='text-3xl font-semibold'>Memories</div>
+          <div className='text-lg font-semibold'></div>
+        </Link>
 
         <div className="w-full  md:row-span-1 md:col-span-1 bg-green-600 hover:bg-green-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
           <div className='text-5xl font-semibold'>54+</div>
           <div className='text-lg font-semibold'>Handled Projects</div>
         </div>
 
-        <div className="w-full md:row-span-1 md:col-span-1 bg-purple-600 hover:bg-purple-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
+        <div className="w-full min-h-max md:row-span-1 md:col-span-1 bg-purple-600 hover:bg-purple-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
           <div className='text-5xl font-semibold'>40+</div>
           <div className='text-lg font-semibold'>Clients</div>
         </div>
@@ -39,7 +39,7 @@ export default function Home() {
       {/* Personal Info */}
       <div className="row-span-6 col-span-12 md:row-span-4 md:col-span-6 grid grid-cols-2 grid-rows-6 gap-3">
         <div className="row-span-1 col-span-2 bg-neutral-900 rounded-lg flex items-center justify-center"> 
-          <div className="font-semibold text-white text-2xl">A. Mounaim Ghouali</div>
+          <div className="font-semibold text-white text-4xl">A. Mounaim Ghouali</div>
         </div>
 
         {/* Image */}
@@ -88,7 +88,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <Link href='/projects' target='_blank' className="col-span-12 md:row-span-2 md:col-span-7 bg-neutral-900 rounded-lg flex flex-col md:flex-row p-3 gap-3">
+      <Link href='/projects' className="col-span-12 md:row-span-2 md:col-span-7 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-ou rounded-lg flex flex-col md:flex-row p-3 gap-3">
         <div className="hidden md:block md:transform md:rotate-180 text-center text-base text-neutral-400 " style={{ writingMode: 'vertical-rl' }}>See all</div>
         <div className="hidden md:block md:mr-2 md:transform md:rotate-180 text-center text-2xl text-white font-semibold" style={{ writingMode: 'vertical-rl' }}>Projects</div>
         
@@ -133,7 +133,7 @@ export default function Home() {
       </Link>
 
       {/* About */}
-      <Link href={'/about'} target='_blank' className="row-span-2 col-span-5 bg-neutral-900 rounded-lg p-3 text-white">
+      <Link href={'/about'} className="row-span-2 col-span-5 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-out rounded-lg p-3 text-white">
         <div className='flex justify-between mb-2'>
           <div className='text-lg font-semibold'>About me</div>
           <button className='hover:text-rose-600 transition-all duration-100 ease-out'>Resume</button>
