@@ -7,6 +7,8 @@ import project2 from '../../public/project2.gif'
 import Link from 'next/link'
 import { FiLinkedin, FiGithub, FiTwitter, FiInstagram} from 'react-icons/fi'
 import { BiLinkAlt } from 'react-icons/bi'
+import ProjectViewSm from '@/components/ui/ProjectViewSm'
+import { projects } from '@/data/projects'
 
 export default function Home() {
   return (
@@ -15,9 +17,18 @@ export default function Home() {
       {/* Tagline */}
       <div className="h-full w-full flex flex-col md:row-span-4 md:col-span-6 md:grid md:grid-cols-3 md:grid-rows-2 gap-3">
         
-        <div className="w-full md:row-span-1 md:col-span-3 bg-neutral-900 rounded-lg p-3 text-white text-5xl font-bold text-center align-middle">
-          Bring Your Ideas To Life Through 
-          <span className='text-7xl text-rose-600'> UI Design.</span>
+        <div  className="w-full md:row-span-1 md:col-span-3 bg-neutral-900 rounded-lg p-3 text-white text-center align-middle flex flex-col hover:bg-neutral-800 transition-all duration-150 ease-out">
+          <div className='text-2xl font-bold'> WHAT I DO ?</div>
+          <div className='h-px my-2 bg-neutral-800 w-full'/>
+          <div className='grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-3 w-full h-fit'>
+
+            <div className='px-3 py-2 rounded-md bg-green-800 text-green-100 font-semibold flex flex-col items-center justify-center'> Software Engineering</div>
+            <div className='px-2 py-1 rounded-md bg-teal-800 text-teal-100 font-semibold flex flex-col items-center justify-center'> Web Development</div>
+            <div className='px-2 py-1 rounded-md bg-red-800 text-red-100 font-semibold flex flex-col items-center justify-center'> UI/Graphic Design</div>
+            <div className='col-span-3 px-2 py-1 rounded-md bg-rose-800 text-rose-100 font-semibold flex flex-col items-center justify-center'> Software Engineering</div>
+           
+          </div>
+          <div className=' text-center mt-2 w-full font-medium text-neutral-300'>Discover more </div>
         </div>
 
         <Link href={'/memories'} className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
@@ -96,7 +107,7 @@ export default function Home() {
         <div className="visible md:hidden text-center text-2xl text-white font-semibold" >Projects</div>
      
         {/* Project 1 */}
-        <Link href='projects/1' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
+        {/* <Link href='projects/1' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
           <div className='absolute z-30 text-white font-semibold bottom-3 left-3'>My Portfolio</div>
 
           <div className='absolute z-30 flex gap-1 top-3 right-3 text-white'>
@@ -110,10 +121,10 @@ export default function Home() {
 
           <div className='h-full w-full bg-black/50 hover:bg-black/75 transition-all duration-100 ease-out z-20 absolute'></div>
           <Image src={project1} alt='image project' className='z-10 absolute h-full object-cover'/>
-        </Link>
+        </Link> */}
 
         {/* Project 2 */}
-        <Link href='projects/2' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
+        {/* <Link href='projects/2' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
           <div className='absolute z-30 text-white font-semibold bottom-3 left-3'>2nd Project</div>
 
           <div className='absolute z-30 flex gap-1 top-3 right-3 text-white'>
@@ -128,7 +139,10 @@ export default function Home() {
           <div className='h-full w-full bg-black/50 hover:bg-black/75 transition-all duration-100 ease-out z-20 absolute'></div>
           <Image src={project2} alt='image project' className='z-10 absolute h-full object-cover'/>
 
-        </Link>
+        </Link> */}
+        {projects.map((p)=>{
+          if(p.featured) return <ProjectViewSm p={p}/>
+        })}
 
       </Link>
 
