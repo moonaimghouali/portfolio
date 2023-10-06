@@ -2,13 +2,12 @@
 
 import Image from 'next/image'
 import image from '../../public/photo.jpg'
-import project1 from '../../public/project-1.jpeg'
-import project2 from '../../public/project2.gif'
 import Link from 'next/link'
 import { FiLinkedin, FiGithub, FiTwitter, FiInstagram} from 'react-icons/fi'
 import { BiLinkAlt } from 'react-icons/bi'
 import ProjectViewSm from '@/components/ui/ProjectViewSm'
 import { projects } from '@/data/projects'
+import {MdOutlineDesignServices, MdOutlineEngineering, MdOutlineCode} from 'react-icons/md'
 
 export default function Home() {
   return (
@@ -17,34 +16,39 @@ export default function Home() {
       {/* Tagline */}
       <div className="h-full w-full flex flex-col md:row-span-4 md:col-span-6 md:grid md:grid-cols-3 md:grid-rows-2 gap-3">
         
-        <div  className="w-full md:row-span-1 md:col-span-3 bg-neutral-900 rounded-lg p-3 text-white text-center align-middle flex flex-col hover:bg-neutral-800 transition-all duration-150 ease-out">
-          <div className='text-2xl font-bold'> WHAT I DO ?</div>
-          <div className='h-px my-2 bg-neutral-800 w-full'/>
-          <div className='grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-3 w-full h-fit'>
+        
 
-            <div className='px-3 py-2 rounded-md bg-green-800 text-green-100 font-semibold flex flex-col items-center justify-center'> Software Engineering</div>
-            <div className='px-2 py-1 rounded-md bg-teal-800 text-teal-100 font-semibold flex flex-col items-center justify-center'> Web Development</div>
-            <div className='px-2 py-1 rounded-md bg-red-800 text-red-100 font-semibold flex flex-col items-center justify-center'> UI/Graphic Design</div>
-            <div className='col-span-3 px-2 py-1 rounded-md bg-rose-800 text-rose-100 font-semibold flex flex-col items-center justify-center'> Software Engineering</div>
-           
+        {/* About */}
+        <Link href={'/about'} className="row-span-2 md:row-span-1 col-span-3 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-out rounded-lg p-3 text-white">
+          <div className='flex justify-between mb-2'>
+            <div className='text-lg font-semibold'>About me</div>
+            <button className='hover:text-rose-600 transition-all duration-100 ease-out'>Resume</button>
           </div>
-          <div className=' text-center mt-2 w-full font-medium text-neutral-300'>Discover more </div>
-        </div>
+          <div className='text-neutral-200'>
+          
+          </div>
+        </Link>
 
-        <div href={'/memories'} className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
-          <div className='text-5xl font-semibold'>+3</div>
-          <div className='text-xl font-semibold'>Years</div>
-        </div>
+        <Link href={'/discover'}  className="w-full md:row-span-1 md:col-span-3 bg-neutral-900 rounded-lg p-3 text-white text-center align-middle flex flex-col hover:bg-neutral-800 transition-all duration-150 ease-out">
+          <div className='text-2xl font-bold mb-2'> WHAT I DO ?</div>
+          <div className='grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-1 w-full h-full'>
+            <div className=' py-4 md:py-1 rounded-md  text-teal-500 font-semibold flex flex-col items-center justify-center text-lg'>
+              <MdOutlineEngineering size={36} className={'text-teal-500'}/>
+              Software Engineering
+            </div>
+            <div className=' py-4 md:py-1 rounded-md  text-green-500 font-semibold flex flex-col items-center justify-center text-lg'> 
+              <MdOutlineCode size={36} className={'text-green-500'} />
+              Software Development
+            </div>
+            <div className=' py-4 md:py-1 rounded-md  text-sky-500 font-semibold flex flex-col items-center justify-center text-lg'> 
+              <MdOutlineDesignServices size={36} className={'text-sky-500'}/>
+              UI/Graphic Design
+            </div>       
+          </div>
 
-        <div className="w-full  md:row-span-1 md:col-span-1 bg-green-600 hover:bg-green-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
-          <div className='text-5xl font-semibold'>54+</div>
-          <div className='text-xl font-semibold'>Handled Projects</div>
-        </div>
+          <div className=' text-center mt-2 w-full font-medium text-neutral-300 '>Discover more </div>
+        </Link>
 
-        <div className="w-full min-h-max md:row-span-1 md:col-span-1 bg-purple-600 hover:bg-purple-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
-          <div className='text-5xl font-semibold'>40+</div>
-          <div className='text-xl font-semibold'>Clients</div>
-        </div>
       </div>
 
       {/* Personal Info */}
@@ -99,7 +103,7 @@ export default function Home() {
       </div>
 
       {/* Projects */}
-      <Link href='/projects' className="col-span-12 md:row-span-2 md:col-span-7 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-ou rounded-lg flex flex-col md:flex-row p-3 gap-3">
+      <Link href='/projects' className="col-span-12 md:row-span-2 md:col-span-6 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-ou rounded-lg flex flex-col md:flex-row p-3 gap-3">
         <div className="hidden md:block md:transform md:rotate-180 text-center text-base text-neutral-400 " style={{ writingMode: 'vertical-rl' }}>See all</div>
         <div className="hidden md:block md:mr-2 md:transform md:rotate-180 text-center text-2xl text-white font-semibold" style={{ writingMode: 'vertical-rl' }}>Projects</div>
         
@@ -112,17 +116,23 @@ export default function Home() {
 
       </Link>
 
-      {/* About */}
-      <Link href={'/about'} className="row-span-2 col-span-5 bg-neutral-900 hover:bg-neutral-800 transition-all duration-150 ease-out rounded-lg p-3 text-white">
-        <div className='flex justify-between mb-2'>
-          <div className='text-lg font-semibold'>About me</div>
-          <button className='hover:text-rose-600 transition-all duration-100 ease-out'>Resume</button>
-        </div>
-        <div className='text-neutral-200'>
-        
-        </div>
-      </Link>
+      {/* Perso */}
+      <div className='row-span-2 col-span-6 flex flex-col md:grid md:grid-cols-3 gap-3'>
+        <Link href={'/tfti'} className="w-full md:row-span-1 md:col-span-1 bg-lime-400 hover:bg-lime-500 rounded-lg flex flex-col items-center justify-center text-neutral-950 p-3 transition-all duration-100 ease-out">
+          <div className='text-xl font-semibold'>Things from the</div>
+          <div className='text-4xl font-semibold'>Internet</div>
+        </Link>
 
+        <Link href={'/messages'} className="w-full  md:row-span-1 md:col-span-1 bg-emerald-400 hover:bg-emerald-500 rounded-lg flex flex-col items-center justify-center text-neutral-950 p-3 transition-all duration-100 ease-out">
+          <div className='text-xl font-semibold'>Leave a</div>
+          <div className='text-4xl font-semibold'>Message</div>
+        </Link>
+
+        <Link href={'/'} className="w-full min-h-max md:row-span-1 md:col-span-1 bg-purple-600 hover:bg-purple-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
+          <div className='text-xl font-semibold'>40+</div>
+          <div className='text-4xl font-semibold'>Clients</div>
+        </Link>
+      </div>
     </main>
   )
 }

@@ -2,3 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: theme('colors.neutral.950');
+}
+
+:root{  
+  background-color: theme('colors.neutral.950');
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: theme('colors.neutral.300');;
+  }
+
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.neutral.950');;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.neutral.800');
+    cursor: pointer;
+  } 
+
