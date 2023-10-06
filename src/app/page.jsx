@@ -31,19 +31,19 @@ export default function Home() {
           <div className=' text-center mt-2 w-full font-medium text-neutral-300'>Discover more </div>
         </div>
 
-        <Link href={'/memories'} className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
-          <div className='text-3xl font-semibold'>Memories</div>
-          <div className='text-lg font-semibold'></div>
-        </Link>
+        <div href={'/memories'} className="w-full md:row-span-1 md:col-span-1 bg-teal-600 hover:bg-teal-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
+          <div className='text-5xl font-semibold'>+3</div>
+          <div className='text-xl font-semibold'>Years</div>
+        </div>
 
         <div className="w-full  md:row-span-1 md:col-span-1 bg-green-600 hover:bg-green-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
           <div className='text-5xl font-semibold'>54+</div>
-          <div className='text-lg font-semibold'>Handled Projects</div>
+          <div className='text-xl font-semibold'>Handled Projects</div>
         </div>
 
         <div className="w-full min-h-max md:row-span-1 md:col-span-1 bg-purple-600 hover:bg-purple-700 rounded-lg flex flex-col items-center justify-center text-white p-3 transition-all duration-100 ease-out">
           <div className='text-5xl font-semibold'>40+</div>
-          <div className='text-lg font-semibold'>Clients</div>
+          <div className='text-xl font-semibold'>Clients</div>
         </div>
       </div>
 
@@ -105,41 +105,7 @@ export default function Home() {
         
         <div className="visible md:hidden text-center text-base text-neutral-400 " >See all</div>
         <div className="visible md:hidden text-center text-2xl text-white font-semibold" >Projects</div>
-     
-        {/* Project 1 */}
-        {/* <Link href='projects/1' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
-          <div className='absolute z-30 text-white font-semibold bottom-3 left-3'>My Portfolio</div>
-
-          <div className='absolute z-30 flex gap-1 top-3 right-3 text-white'>
-            <Link href={''} target='_blank' className='p-2 rounded-full hover:bg-black'> 
-              <FiGithub  size={18}/>  
-            </Link>
-            <Link href={''} target='_blank' className='p-2 rounded-full hover:bg-black'> 
-              <BiLinkAlt size={18}/>
-            </Link>            
-          </div>
-
-          <div className='h-full w-full bg-black/50 hover:bg-black/75 transition-all duration-100 ease-out z-20 absolute'></div>
-          <Image src={project1} alt='image project' className='z-10 absolute h-full object-cover'/>
-        </Link> */}
-
-        {/* Project 2 */}
-        {/* <Link href='projects/2' target='_blank' className='w-full aspect-video rounded-md overflow-clip relative'>
-          <div className='absolute z-30 text-white font-semibold bottom-3 left-3'>2nd Project</div>
-
-          <div className='absolute z-30 flex gap-1 top-3 right-3 text-white'>
-            <Link href={''} target='_blank' className='p-2 rounded-full hover:bg-neutral-900'> 
-              <FiGithub  size={18}/>  
-            </Link>
-            <Link href={''} target='_blank' className='p-2 rounded-full hover:bg-neutral-900'> 
-              <BiLinkAlt size={18}/>
-            </Link>            
-          </div>
-
-          <div className='h-full w-full bg-black/50 hover:bg-black/75 transition-all duration-100 ease-out z-20 absolute'></div>
-          <Image src={project2} alt='image project' className='z-10 absolute h-full object-cover'/>
-
-        </Link> */}
+    
         {projects.map((p)=>{
           if(p.featured) return <ProjectViewSm p={p}/>
         })}
@@ -153,10 +119,7 @@ export default function Home() {
           <button className='hover:text-rose-600 transition-all duration-100 ease-out'>Resume</button>
         </div>
         <div className='text-neutral-200'>
-        I'm a UX/UI Designer with a background in Psychology, which gives me a unique edge in empathizing with users 
-        and improving their experience through design. 
-        My research experience has refined my problem-solving skills and user insights. 
-        I'm constantly seeking new ways to learn and grow through real-world experiences.
+        
         </div>
       </Link>
 

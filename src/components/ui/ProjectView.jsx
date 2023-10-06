@@ -6,15 +6,14 @@ import Image from 'next/image'
 
 const ProjectView = ({p}) => {
   return (
-    <div className='bg-neutral-900 rounded-md w-11/12 md:w-4/6 flex flex-col md:flex-row '>
-      <div className=' h-1/3 md:h-full w-full md:w-1/3 md:min-w-1/3 bg-white'>
-      asas
-      </div>
+    
+    <div className='bg-neutral-900 rounded-md w-full flex flex-col overflow-clip h-full'>
+      <Image src={p.screens[0]} alt='' height={4000} width={3000} className='h-[200px] aspect-video bg-neutral-800 object-cover'/>      
       <div className='p-3 flex flex-col gap-1 text-white'>
 
         <div className='flex justify-between'>
           <div className='text-[9px] font-medium w-fit text-teal-500'>{p.domain}</div>
-          <div className='font-medium  text-base'>  {p.date}</div>
+          <div className='font-medium  text-[9px]'>  {p.date}</div>
         </div>
         <div className='text-3xl font-semibold'>{p.title} </div>
         
@@ -24,7 +23,7 @@ const ProjectView = ({p}) => {
             <BiLinkAlt  size={14}/>  
           </Link>
 
-          <Link href={p.code} target='_blank' className='p-2 rounded-full hover:bg-neutral-700 flex gap-2 items-center justify-center px-2 rounded-full bg-neutral-800'> 
+          <Link href={p.code} target='_blank' className='p-2 hover:bg-neutral-700 flex gap-2 items-center justify-center px-2 rounded-full bg-neutral-800'> 
             <div className='text-xs'>Project Code</div>
             <FiGithub  size={14}/>  
           </Link>
@@ -40,15 +39,17 @@ const ProjectView = ({p}) => {
           ))}
         </div>
 
+        <div className='h-px bg-neutral-700 w-full my-1'/>
         {p.preview && (
-        <>
-          <div className='h-px bg-neutral-700 w-full my-1'/>
           <div className='flex flex-row gap-2'>
             {p.screens.map((image)=>(
-              <Image key={p.id} src={`/${image}`} width={20} height={50} alt='image' className='w-20 apsect-auto bg-white rounded-md'/>
+              <Image key={p.id} src={image} width={2000} height={2000} alt='image' className='w-28 apsect-auto bg-white rounded-md hover:cursor-pointer hover:shadow-md'/>
             ))}
           </div>
-        </>
+        )}
+
+        {!p.preview && (
+          <div className='font-medium text-xs text-neutral-400'>No Screens available</div>
         )}
         
       </div>
