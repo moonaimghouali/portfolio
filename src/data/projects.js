@@ -31,7 +31,7 @@ export const projects =
         date : 'Jun 2023',
         domain : 'Web Development',
         description : 'A web application for monitoring and supervising daily oil production produced across all Algerian national territories.',
-        live : '',
+        live : 'https://www.youtube.com',
         code : '',
         previewImage : '/p1/cover.jpg',
         screens : [

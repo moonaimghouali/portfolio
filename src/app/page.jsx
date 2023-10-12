@@ -122,7 +122,6 @@ export default function Home() {
           <div className="visible md:hidden text-center text-2xl text-white font-semibold" >Projects</div>
         </Link>
         
-    
         {projects.map((p)=>{
           if(p.featured) return <ProjectViewSm p={p}/>
         })}
