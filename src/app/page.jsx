@@ -60,7 +60,7 @@ export default function Home() {
             {(choix ===1) && (<div>MNM</div>)}
             {(choix ===2) && (<div>عبد المنعم غوالي</div>)}
             {(choix ===3) && (<div>moonaim</div>)}
-            {(choix ===4) && (<div>l'moon</div>)}
+            {(choix ===4) && (<div>l&apos;moon</div>)}
           </div>
         </button>
 
