@@ -4,9 +4,7 @@ import React from 'react'
 import {projects} from '@/data/projects'
 import ProjectView from '@/components/ui/ProjectView'
 import TopBar  from '@/components/ui/TopBar';
-import Link from 'next/link';
-import {BiLogoLinkedin, BiLogoGmail} from 'react-icons/bi'
-import { LINKS } from '@/data/links';
+import CTA from '@/components/ui/CTA';
 
 const Projects = () => {
 
@@ -18,14 +16,14 @@ const Projects = () => {
       <TopBar title={'Projects'}/>
 
       {/* <div className='h-full w-full flex flex-col items-center gap-3 p-3 md:p-6'> */}
-      <div className='w-full text-center text-4xl font-semibold text-white mt-6 mb-4'>Some of the projects I worked on</div>
-      <div className='h-full w-full grid gird-cols-1 gap-6 py-6 px-3 md:px-56'>
+      <div className='w-full text-center text-4xl font-semibold text-white mt-10 mb-4'>Here are some of the projects I worked on</div>
+      <div className='h-full w-full grid  md:grid-cols-2 gap-6 py-6 px-3 md:px-40'>
         {projects.map((p)=>(
           <ProjectView key={p.id} p={p}/>
         ))}
       </div>
       
-      <div className='w-full text-center text-4xl font-semibold md:px-56 text-white mt-10 mb-6'>Intrested in collaborating together on a particular project?</div>
+      {/* <div className='w-full text-center text-4xl font-semibold md:px-56 text-white mt-10 mb-6'>Intrested in collaborating together on a particular project?</div>
 
       <div className='w-full px-3 md:px-56 '>
           <div className='w-full h-fit py-3 px-3 md:px-36  rounded-md '>
@@ -44,7 +42,10 @@ const Projects = () => {
               </div>
           </div>
 
-      </div>
+      </div> */}
+
+      <CTA />
+
       <div className='h-20'>
 
       </div>

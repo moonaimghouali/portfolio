@@ -1,12 +1,11 @@
 import React from 'react'
 
-const Section = ({title , children}) => {
+export const Section = ({children}) => {
   return (
-    <div className='flex flex-col mt-5 w-full'>
-        <div className='text-3xl font-bold text-white mb-4'>{title}</div>
-        {children}
+    <div className='w-full h-fit flex flex-col md:flex-col gap-6 py-3 text-white'>
+      {children}
     </div>
   )
 }
 
-export default Section
+ 

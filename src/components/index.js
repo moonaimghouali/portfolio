@@ -1,4 +1,4 @@
-export {default as Date} from './Date'
-export {default as Line} from './Line'
-export {default as Section} from './Section'
-export {default as TopBar} from './TopBar'
+export {Content} from './Content';
+export {Date} from './Date';
+export {ImageView} from './ImageView';
+export {Section} from './Section';

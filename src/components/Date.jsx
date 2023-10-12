@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Date = ({date}) => {
+export const Date = ({date}) => {
   return (
-    <div className='font-semibold text-sm text-rose-600'>{date}</div>
+    <div className='w-full text-left md:text-right h-fit md:w-[20%] text-base font-medium text-emerald-400'>
+    {date}
+    </div>
   )
 }
 
-export default Date
+

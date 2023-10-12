@@ -8,30 +8,34 @@ const ProjectView = ({p}) => {
   return (
     
     <div className='bg-neutral-900 rounded-md w-full flex flex-col overflow-clip h-full'>
-      <Image src={p.screens[0]} alt='' height={4000} width={3000} className='h-[200px] aspect-video bg-neutral-800 object-cover'/>      
+      <Image src={p.previewImage} alt='' height={1000} width={1000} className='h-[200px] w-full bg-neutral-800 object-cover'/>      
       <div className='p-3 flex flex-col gap-1 text-white'>
 
         <div className='flex justify-between'>
-          <div className='text-[9px] font-medium w-fit text-teal-500'>{p.domain}</div>
-          <div className='font-medium  text-[9px]'>  {p.date}</div>
+          <div className='text-base font-medium w-fit text-teal-500'>{p.domain}</div>
+          <div className='font-medium  text-base'>  {p.date}</div>
         </div>
         <div className='text-3xl font-semibold'>{p.title} </div>
         
-        <div className='flex flex-row gap-3 my-2'>
+        
+
+        <p className='text-neutral-100 text-sm my-3'>{p.description}</p>
+
+        <div className='flex flex-row gap-3 mb-2'>
+          {p.live !== '' && (
           <Link href={p.live} target='_blank' className='hover:bg-neutral-700 flex gap-2 items-center justify-center px-2 rounded-full bg-neutral-800'> 
             <div className='text-xs'>Live Demo</div>
             <BiLinkAlt  size={14}/>  
           </Link>
+          )}
 
+          {p.code !== '' && (
           <Link href={p.code} target='_blank' className='p-2 hover:bg-neutral-700 flex gap-2 items-center justify-center px-2 rounded-full bg-neutral-800'> 
             <div className='text-xs'>Project Code</div>
             <FiGithub  size={14}/>  
           </Link>
-          
-          
+          )}
         </div>
-
-        <p className='text-neutral-300 text-sm my-2'>{p.description}</p>
 
         <div className='flex flex-row flex-wrap gap-2 mt-1'>  
           {p.techStack.map((t)=>(
@@ -40,6 +44,7 @@ const ProjectView = ({p}) => {
         </div>
 
         <div className='h-px bg-neutral-700 w-full my-1'/>
+
         {p.preview && (
           <div className='flex flex-row gap-2'>
             {p.screens.map((image)=>(

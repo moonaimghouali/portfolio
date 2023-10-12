@@ -6,6 +6,7 @@ import Link from 'next/link';
 import {BiLogoLinkedin, BiLogoGmail} from 'react-icons/bi'
 import { LINKS } from '@/data/links';
 import {MdOutlineDesignServices, MdOutlineEngineering, MdOutlineCode} from 'react-icons/md'
+import CTA from '@/components/ui/CTA';
 
 const page = () => {
   return (
@@ -13,7 +14,7 @@ const page = () => {
 
     <TopBar title={'Expertise'}/>
 
-    <div className='w-full text-center text-4xl font-semibold text-white mt-6 mb-4'>Some of the projects I worked on</div>
+    <div className='w-full text-center text-4xl font-semibold text-white mt-10 mb-4'>My skills and Expertise I developed over the years include</div>
     
     <div className='h-full w-full grid gird-cols-1 md:grid-cols-3 gap-3 py-6 px-3 md:px-14 '>
 
@@ -51,35 +52,36 @@ const page = () => {
         <div className='h-px bg-neutral-700 w-full my-3'/>
 
         <div className='text-base text-neutral-100 font-light flex flex-col gap-1'>
-            <div><span className='text-white font-medium'>Front-End Development</span> : Crafting modern and responsive user interfaces to ensure optimal user experience.</div>
-            <div><span className='text-white font-medium'>Back-End Development</span> : Capture all function and technical requirements.</div>
-            <div><span className='text-white font-medium'>Database Management</span> : Proficient in working with relational (SQL) and NoSQL databases to store and retrieve data efficiently.</div>
-            <div><span className='text-white font-medium'>Mobile Development</span> : Skilled in creating cross-platform mobile apps using react-native.</div>
+            <div><span className='text-white font-medium'>High-Quality Mockups</span> : Deliver pixel-perfect mockups and design prototypes that provide an accurate representation of the final product.</div>
+            <div><span className='text-white font-medium'>User-Centered Design</span> : Creating visually appealing and intuitive interfaces that prioritize user needs and preferences.</div>
+            <div><span className='text-white font-medium'>Responsive Design</span> : Designing interfaces adaptive to various screen sizes and resolutions.</div>
+            <div><span className='text-white font-medium'>Mobile Prototyping</span> : Building interactive prototypes to demonstrate design concepts and functionality.</div>
         </div>
         
       </div>
     </div>
 
-    <div className='w-full text-center text-4xl font-semibold text-white mt-6 mb-6'>Intrested in collaborating together on a particular project?</div>
+    {/* <div className='w-full text-center text-4xl font-semibold text-white mt-6 mb-6'>Intrested in collaborating together on a particular project?</div>
 
     <div className='w-full px-3 md:px-14 '>
         <div className='w-full h-fit py-3 px-3 md:px-48  rounded-md '>
             <div className='w-full text-center text-white font-semibold text-3xl'>You can reach me at </div>
             <div className='h-px w-full  my-3'/>
 
-            <div className='w-full h-fit flex items-center justify-center gap-3 md:gap-20'>
-                <Link href={LINKS.LINKEDIN} className='p-3 h-44 aspect-square rounded bg-[#0072b1] flex flex-col items-center justify-center gap-3'>
+            <div className='w-full h-fit flex items-center justify-center gap-6'>
+                <Link href={LINKS.LINKEDIN} className='p-3 h-48 aspect-square rounded bg-[#0072b1] flex flex-col items-center justify-center gap-3'>
                     <BiLogoLinkedin size={36} className={'text-white'}/>
                     <div className='text-xl font-semibold text-white text-center w-full'>A. Mounaim Ghouali</div>
                 </Link>
-                <button onClick={()=>{navigator.clipboard.writeText(LINKS.EMAIL); }} href='mailto:ia_ghouali@esi.dz' className='p-3 h-44 aspect-square rounded bg-white flex flex-col items-center justify-center gap-3' >
+                <button onClick={()=>{navigator.clipboard.writeText(LINKS.EMAIL); }} href='mailto:ia_ghouali@esi.dz' className='p-3 h-48 aspect-square rounded bg-white flex flex-col items-center justify-center gap-3' >
                     <BiLogoGmail size={36} className={'text-red-500'}/>
                     <div className='text-lg font-semibold text-neutral-900 text-center w-full '>{LINKS.EMAIL}</div>
                 </button>
             </div>
         </div>
 
-    </div>
+    </div> */}
+    <CTA />
 
     <div className='h-20'>
 
