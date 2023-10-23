@@ -135,11 +135,11 @@ export default function Home() {
           <div className='text-4xl font-semibold'>Internet</div>
         </Link>
 
-        <div href={'/messages'} className="w-full min-h-[150px]  md:row-span-1 md:col-span-1 bg-emerald-400/50  rounded-lg flex flex-col items-center justify-center text-neutral-950 p-3 transition-all duration-100 ease-out">
+        <Link href={'/messages'} className="w-full min-h-[150px]  md:row-span-1 md:col-span-1 bg-emerald-400 hover:bg-emerald-500  rounded-lg flex flex-col items-center justify-center text-neutral-950 p-3 transition-all duration-100 ease-out">
           <MdLockOutline size={36} className={'text-neutral-950'} />
           <div className='text-xl font-semibold'>Leave a</div>
           <div className='text-4xl font-semibold'>Message</div>
-        </div>
+        </Link>
 
         <div href={'/'} className="w-full min-h-[150px] md:row-span-1 md:col-span-1 bg-violet-400/50  rounded-lg flex flex-col items-center justify-center text-neutral-950 p-3 transition-all duration-100 ease-out">
           <MdLockOutline size={36} className={'text-neutral-950'} />

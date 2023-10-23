@@ -15,10 +15,10 @@ const About = () => {
         <div className=' w-full md:w-1/2 h-full flex flex-col'>
           <div className='text-white font-medium text-4xl mt-6 text-center whitespace-pre-wrap'>
             Hey There, my name is &#10; 
-            <span className={merriweather.className + ' inline-block text-center w-full mt-6 font-semibold text-neutral-400'}>A. Mounaim Ghouali | عبد المنعم غوالي</span>
+            <span className={merriweather.className + ' inline-block text-center w-full mt-4 font-semibold text-yellow-300'}>A. Mounaim Ghouali | عبد المنعم غوالي</span>
           </div>
 
-          <div className='text-white font-normal text-4xl mt-6 text-center whitespace-pre-wrap'>
+          <div className='text-white font-normal text-4xl mt-4 text-center whitespace-pre-wrap'>
             I am
           </div>
         </div>

@@ -5,6 +5,8 @@ import { BiLinkAlt } from 'react-icons/bi'
 import Image from 'next/image'
 
 const ProjectView = ({p}) => {
+
+  let date = new Date(p.date)
   return (
     
     <div className='bg-neutral-900 rounded-md w-full flex flex-col overflow-clip h-full'>
@@ -13,7 +15,7 @@ const ProjectView = ({p}) => {
 
         <div className='flex justify-between'>
           <div className='text-base font-medium w-fit text-teal-500'>{p.domain}</div>
-          <div className='font-medium  text-base'>  {p.date}</div>
+          <div className='font-medium  text-base'>  {date.toLocaleDateString('en-US',{year: "numeric", month: 'short',})}</div>
         </div>
         <div className='text-3xl font-semibold'>{p.title} </div>
         
